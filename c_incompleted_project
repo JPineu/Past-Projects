@@ -12,13 +12,6 @@
 #include <Adafruit_ADS1X15.h>
 #include <max6675.h>
 
-int16_t imu_ax;
-int16_t imu_ay;
-int16_t imu_az;
-
-int16_t imu_gx;
-int16_t imu_gy;
-int16_t imu_gz;
 
 int16_t adc4,adc5,adc6      // Variáveis dos transdutores de Pressão
 float P4,P5,P6
