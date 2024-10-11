@@ -19,54 +19,6 @@ int level
 
 float T4,T5,T6,T7,T8,mVL,mVG,hL,hG,h1,Vl,Vg,ml,mg,x //Variáveis Temperatura
 
-void idle_state(void) { return; }
-
-void toggle_led_high(void)
-{
-    digitalWrite(LED_PIN, HIGH);
-}
-
-void toggle_led(void)
-{
-    static int led_status = 0;
-    led_status ^= 1;
-    digitalWrite(LED_PIN, led_status);
-}
-
-void toggle_led_1000ms(void)
-{
-    static clock_t begin = 0, end = 0;
-    static int led_status = 0;
-    end = millis();
-    
-    int msec = (end - begin);
-    if(msec > 1000)
-    {
-        begin = clock();
-        //togle led
-        led_status ^= 1;
-        digitalWrite(LED_PIN, led_status);
-    }
-}
-
-void toggle_led_500ms(void)
-{
-    static clock_t begin = 0, end = 0;
-    static int led_status = 0;
-    end = millis();
-    
-    int msec = (end - begin);
-    if(msec > 500)
-    {
-        begin = clock();
-        //togle led
-        led_status ^= 1;
-        digitalWrite(LED_PIN, led_status);
-    }
-}
-
-
-
 
 void read_pressure4(void)
 {
